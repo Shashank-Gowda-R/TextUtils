@@ -17,7 +17,7 @@ const About = (props) => {
         } else {
             setMyStyle({
                 color: 'white',
-                backgroundColor: 'black',
+                backgroundColor: '#244a68',
                 border: '1px solid black'
             });
         }

@@ -57,24 +57,26 @@ const TextForm = (props) => {
         <div style={{ color: mode === 'light' ? 'black' : 'white' }}>
             <h1 className={`text-${mode === 'light' ? 'dark' : 'light'}`} >{heading} </h1>
             <div className={`mb-3`}>
-                <textarea className="form-control" style={{ backgroundColor: mode === 'dark' ? '#666666' : '#f2f2f2', color: mode === 'light' ? 'black' : 'white' }} value={text} onChange={handleOnChange} id="textBox" rows="8"></textarea>
+                <textarea className="form-control" style={{ backgroundColor: mode === 'dark' ? '#244a68' : '#f2f2f2', color: mode === 'light' ? 'black' : 'white' }} value={text} onChange={handleOnChange} id="textBox" rows="8"></textarea>
             </div>
             <button className="btn btn-primary mx-2 my-1" onClick={handleUpClick} >Convert to Uppercase</button>
             <button className='btn btn-primary mx-2 my-1' onClick={handleLowClick}>Convert to Lowercase</button>
             <button className='btn btn-primary mx-2 my-1' onClick={handleClear}>Clear</button>
             <button className='btn btn-primary mx-2 my-1' onClick={handleCopy}>Copy Text</button>
             <button className='btn btn-primary mx-2 my-1' onClick={handleExtraSpace}>Remove Extra space</button>
-            <h2 className="container my-4">
+            <h2 style={{marginTop:'15px'}}>
                 Your text summary
             </h2>
-            <p>
-                {
-                    (text.length > 0) ? text.split(' ').length : 0
-                } words </p>
-            <p>{text.length} Characters</p>
-            <p>On average it takes {(text.length > 0) ? text.split(' ').length * 0.008 : 0} minutes to reads</p>
-            <h2 className='mx-4' >Preview</h2>
-            <p> {text.length > 0 ? text : 'Enter your text above in the textbox to preview it here'} </p>
+            <div style={{marginLeft:'10px'}} >
+                <p>
+                    {
+                        (text.length > 0) ? text.split(' ').length : 0
+                    } words </p>
+                <p>{text.length} Characters</p>
+                <p>On average it takes {(text.length > 0) ? text.split(' ').length * 0.008 : 0} minutes to reads</p>
+            </div>
+            <h2 style={{marginTop:'15px'}} >Preview</h2>
+            <p style={{marginLeft:'10px'}}> {text.length > 0 ? text : 'Enter your text above in the textbox to preview it here'} </p>
         </div>
     );
 }

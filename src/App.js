@@ -17,7 +17,7 @@ const App = () => {
     })
     setTimeout(() => {
       setAlert(null)
-    }, 2000);
+    }, 3000);
   }
 
   const toggleMode = () => {
@@ -42,7 +42,7 @@ const App = () => {
       <Router>
         <Navbar title={title} nav={nav} mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
-        <div className="container my-5">
+        <div className="container my-3">
           <Switch>
             <Route exact path='/about' >
               <About mode={mode}/>
