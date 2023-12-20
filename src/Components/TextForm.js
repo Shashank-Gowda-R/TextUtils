@@ -70,13 +70,13 @@ const TextForm = (props) => {
             <div style={{marginLeft:'10px'}} >
                 <p>
                     {
-                        (text.length > 0) ? text.split(' ').length : 0
+                        (text.length > 0) ? text.split(/\s+/).length : 0
                     } words </p>
                 <p>{text.length} Characters</p>
-                <p>On average it takes {(text.length > 0) ? text.split(' ').length * 0.008 : 0} minutes to reads</p>
+                <p>On average it takes {(text.length > 0) ? text.split(/\s+/).length * 0.008 : 0} minutes to reads</p>
             </div>
             <h2 style={{marginTop:'15px'}} >Preview</h2>
-            <p style={{marginLeft:'10px'}}> {text.length > 0 ? text : 'Enter your text above in the textbox to preview it here'} </p>
+            <p style={{marginLeft:'10px'}}> {text.length > 0 ? text : 'Nothing to preview'} </p>
         </div>
     );
 }

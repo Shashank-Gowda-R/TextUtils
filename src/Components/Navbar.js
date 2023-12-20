@@ -27,6 +27,9 @@ const Navbar = (props) => {
                             <Link className="nav-link active" aria-current="page" to="/about">About</Link>
                         </li>
                     </ul>
+                    {/* <div className="d flex">
+                        <div className="bg-primary mx-2 rounded" style={{height:'30px',width:'30px'}}></div>
+                    </div> */}
                     <div className={`form-check form-switch text-${mode === 'light' ? 'dark' : 'light'}`}>
                         <input className="form-check-input" onClick={toggleMode} type="checkbox" id="flexSwitchCheckDefault" />
                         <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{mode === 'light' ? 'dark' : 'light'} Mode</label>

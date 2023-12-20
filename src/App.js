@@ -25,18 +25,16 @@ const App = () => {
       setMode('light');
       document.body.style.backgroundColor = '#f2f2f2';
       showAlert("Light Mode Enabled", "success");
-      document.title = 'TextUtils - Home(Light Mode)'
     } else {
       setMode('dark');
       document.body.style.backgroundColor = '#042743'
       showAlert("Dark Mode Enabled", "success");
-      document.title = 'TextUtils - Home(Dark Mode)'
     }
   }
 
   let title = 'TextUtils';
   let nav = ['Home', 'About', 'Contact']
-  let heading = 'Enter the text to analyze';
+  let heading = 'Text analyzer';
   return (
     <>
       <Router>
